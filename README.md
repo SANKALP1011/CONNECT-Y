@@ -1,3 +1,3 @@
 
-A Messaging App./
+A Messaging App.\
 STATUS - ONGOING.
