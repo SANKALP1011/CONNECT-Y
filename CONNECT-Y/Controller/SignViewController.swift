@@ -31,7 +31,6 @@ class SignViewController: UIViewController {
     override func viewDidLoad()
     {
       setupUI()
-      
     }
     
     private func setupUI()
