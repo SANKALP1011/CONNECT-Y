@@ -90,15 +90,23 @@ class SignViewController: UIViewController {
     
     
     @IBAction func SignButton(_ sender: UIButton) {
-        
-        Firebase.Auth.auth().createUser(withEmail: yourMail.text!, password: passwordText.text!) { (authResult,eroor) in
+        DataBaseManager.shared.checkNewUser(with: yourMail.text!) { [self] (exists) in
+            guard !exists
+            else
+            {
+                return
+            }
+            
+            Firebase.Auth.auth().createUser(withEmail: self.yourMail.text!, password: passwordText.text!) { (authResult,eroor) in
             guard let result = authResult , eroor != nil
             else
             {
                 print(eroor?.localizedDescription)
                 return
                 print("signed in")
+
             }
+                
         }
 //        if let email = self.yourMail.text , let password = self.passwordText.text{
 //               DataBaseManager.shared.checkNewUser(with: self.yourMail.text!) { (exists) in
@@ -118,7 +126,8 @@ class SignViewController: UIViewController {
 //       }
 //            DataBaseManager.shared.insertUserMessage(with: mesaageUser(userEmail: yourMail.text!))
 //     }
+            
    }
 }
     
-
+}

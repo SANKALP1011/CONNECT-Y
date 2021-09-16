@@ -30,7 +30,7 @@ class DataBaseManager {
         database.child(user.safeEmail).setValue([
             //"first_name": user.userFirstName,
             //"last_name": user.userLastName
-            user.safeEmail
+            mesaageUser.init(userEmail: user.safeEmail ) 
             ])
    }
 }
@@ -42,8 +42,8 @@ struct mesaageUser
    // let userLastName: String
     let userEmail: String
     var safeEmail: String{
-        var safeEmail = userEmail.replacingOccurrences(of: ".", with: ",")
-        safeEmail = userEmail.replacingOccurrences(of: "@", with: ",")
+        var safeEmail = userEmail.replacingOccurrences(of: ".", with: "k")
+        safeEmail = userEmail.replacingOccurrences(of: "@", with: "k")
         return safeEmail
     }
    // let userProfilePhoto: String
