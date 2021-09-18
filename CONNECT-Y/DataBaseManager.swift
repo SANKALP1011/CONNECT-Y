@@ -15,7 +15,7 @@ class DataBaseManager {
     
     func checkNewUser(with email: String , completion: @escaping ((Bool) -> Void)){
         var safeEmail = email.replacingOccurrences(of: ".", with: "-")
-        safeEmail = email.replacingOccurrences(of: "@", with: "-")
+        safeEmail = safeEmail.replacingOccurrences(of: "@", with: "-")
             database.child(safeEmail).observeSingleEvent(of: .value) { (snapshot) in
             guard let value = snapshot.value as? String
             else{
@@ -30,9 +30,9 @@ class DataBaseManager {
         database.child(user.safeEmail).setValue([
             //"first_name": user.userFirstName,
             //"last_name": user.userLastName
-            mesaageUser.init(userEmail: user.safeEmail ) 
+            user.userEmail
             ])
-   }
+   } 
 }
 
 
@@ -43,7 +43,7 @@ struct mesaageUser
     let userEmail: String
     var safeEmail: String{
         var safeEmail = userEmail.replacingOccurrences(of: ".", with: "k")
-        safeEmail = userEmail.replacingOccurrences(of: "@", with: "k")
+        safeEmail = safeEmail.replacingOccurrences(of: "@", with: "k")
         return safeEmail
     }
    // let userProfilePhoto: String

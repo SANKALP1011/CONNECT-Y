@@ -88,8 +88,7 @@ class LogViewController: UIViewController {
             }
           navigationController?.dismiss(animated: true, completion: nil)
     }
-        
-    }
+}
     
     @IBAction func googleLogIn(_ sender: UIButton) {
         GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in

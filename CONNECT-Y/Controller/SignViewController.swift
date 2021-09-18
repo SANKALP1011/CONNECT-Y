@@ -27,7 +27,6 @@ class SignViewController: UIViewController {
     
    private let signInConfig = GIDConfiguration.init(clientID: "367437175798-lptot1fh5gj8d23m74pp3038l6b55agv.apps.googleusercontent.com" )
     
-    
     override func viewDidLoad()
     {
       setupUI()
@@ -101,33 +100,12 @@ class SignViewController: UIViewController {
             guard let result = authResult , eroor != nil
             else
             {
-                print(eroor?.localizedDescription)
-                return
                 print("signed in")
-
+                DataBaseManager.shared.insertUserMessage(with: mesaageUser(userEmail: yourMail.text!))
+                performSegue(withIdentifier: "goToInfo", sender: self)
+                return
             }
-                
-        }
-//        if let email = self.yourMail.text , let password = self.passwordText.text{
-//               DataBaseManager.shared.checkNewUser(with: self.yourMail.text!) { (exists) in
-//                   guard !exists else
-//                   {
-//                    return
-//                   }
-//
-//            Auth.auth().createUser(withEmail: email, password: password) { [self] (authResult , error) in
-//                if let error = error{
-//                    print(error.localizedDescription)
-//                }
-//                else{
-//            self.performSegue(withIdentifier: "goToInfo", sender: self)
-//           }
-//         }
-//       }
-//            DataBaseManager.shared.insertUserMessage(with: mesaageUser(userEmail: yourMail.text!))
-//     }
-            
-   }
 }
-    
+}
+}
 }
