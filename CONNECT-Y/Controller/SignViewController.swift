@@ -24,6 +24,7 @@ class SignViewController: UIViewController {
     @IBOutlet weak var SignInWithGoogle: GIDSignInButton!
     @IBOutlet weak var SsignInView: UIView!
     @IBOutlet weak var SignButton: UIButton!
+    @IBOutlet weak var signOutView: UIView!
     
    private let signInConfig = GIDConfiguration.init(clientID: "367437175798-lptot1fh5gj8d23m74pp3038l6b55agv.apps.googleusercontent.com" )
     
@@ -69,6 +70,12 @@ class SignViewController: UIViewController {
         SsignInView.layer.shadowRadius = 10
         SsignInView.layer.shadowOffset = .zero
         
+        signOutView.layer.cornerRadius = 30
+        signOutView.layer.shadowOpacity = 0.5
+        signOutView.layer.shadowColor = UIColor.black.cgColor
+        signOutView.layer.shadowRadius = 10
+        signOutView.layer.shadowOffset = .zero
+        
         giSignView.colorScheme = GIDSignInButtonColorScheme.dark
         giSignView.style = GIDSignInButtonStyle.iconOnly
     
@@ -84,8 +91,15 @@ class SignViewController: UIViewController {
         GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
             guard error == nil else { return }
             self.performSegue(withIdentifier: "goToInfo", sender: self)
-          }
+            let mail = user?.profile?.email
+            DataBaseManager.shared.insertUserMessage(with: mesaageUser(userEmail: mail!))   // Adding user email to database.
         }
+        }
+    
+    @IBAction func signOut(sender: Any) {
+      GIDSignIn.sharedInstance.signOut()
+        print("successfully signed out")
+    }
     
     
     @IBAction func SignButton(_ sender: UIButton) {
@@ -104,8 +118,8 @@ class SignViewController: UIViewController {
                 DataBaseManager.shared.insertUserMessage(with: mesaageUser(userEmail: yourMail.text!))
                 performSegue(withIdentifier: "goToInfo", sender: self)
                 return
-            }
-}
-}
-}
+       }
+     }
+   }
+  }
 }

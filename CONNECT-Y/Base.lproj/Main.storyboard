@@ -259,7 +259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KpP-nz-BQ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4129" y="68"/>
+            <point key="canvasLocation" x="4158" y="31"/>
         </scene>
         <!--Sign View Controller-->
         <scene sceneID="JsQ-9d-nM1">
@@ -338,6 +338,24 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eib-AC-KYb">
+                                <rect key="frame" x="20" y="738" width="89" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOe-wF-HPl">
+                                        <rect key="frame" x="0.0" y="0.0" width="89" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
+                                        <state key="normal" title="Sign Out">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signOutWithSender:" destination="gxW-rZ-j0k" eventType="touchUpInside" id="vXL-iI-Ry8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yn5-SB-IVd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -351,6 +369,7 @@
                         <outlet property="passView" destination="csB-w8-h1Y" id="V20-aA-aNS"/>
                         <outlet property="passwordText" destination="RcE-4T-0ar" id="5vX-wf-UGc"/>
                         <outlet property="signImage" destination="nkM-gn-Gxc" id="Wyw-NO-e9Z"/>
+                        <outlet property="signOutView" destination="Eib-AC-KYb" id="l3x-ez-K1U"/>
                         <outlet property="signView" destination="OLj-V5-kgx" id="TXa-Kj-553"/>
                         <outlet property="textView" destination="UIg-D9-xhD" id="aCU-hQ-bOG"/>
                         <outlet property="yourMail" destination="Nxd-T1-RSK" id="vqv-gX-24q"/>
@@ -359,7 +378,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vet-x2-Quk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2495.6521739130435" y="-295.3125"/>
+            <point key="canvasLocation" x="2494.202898550725" y="-295.3125"/>
         </scene>
         <!--Lottie View Controller-->
         <scene sceneID="1xT-0V-3zT">
@@ -413,11 +432,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6X-3f-dQT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5252" y="80"/>
+            <point key="canvasLocation" x="5277" y="31"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Z76-KI-QnK"/>
+        <segue reference="Rfq-d2-ydv"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Next" width="800" height="622"/>
