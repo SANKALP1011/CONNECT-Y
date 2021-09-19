@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseDatabaseSwift
 import GoogleSignIn
+import JGProgressHUD
 
 
 class SignViewController: UIViewController {
@@ -27,6 +28,8 @@ class SignViewController: UIViewController {
     @IBOutlet weak var signOutView: UIView!
     
    private let signInConfig = GIDConfiguration.init(clientID: "367437175798-lptot1fh5gj8d23m74pp3038l6b55agv.apps.googleusercontent.com" )
+    
+    private let spinner = JGProgressHUD(style: .dark)
     
     override func viewDidLoad()
     {
@@ -109,7 +112,7 @@ class SignViewController: UIViewController {
             {
                 return
             }
-            
+            self.spinner.show(in: self.view)
             Firebase.Auth.auth().createUser(withEmail: self.yourMail.text!, password: passwordText.text!) { (authResult,eroor) in
             guard let result = authResult , eroor != nil
             else
@@ -117,6 +120,7 @@ class SignViewController: UIViewController {
                 print("signed in")
                 DataBaseManager.shared.insertUserMessage(with: mesaageUser(userEmail: yourMail.text!))
                 performSegue(withIdentifier: "goToInfo", sender: self)
+                self.spinner.dismiss()
                 return
        }
      }

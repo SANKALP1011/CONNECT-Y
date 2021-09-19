@@ -36,11 +36,15 @@
 		A091325926B918C9006C5C0F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A091325826B918C9006C5C0F /* GoogleService-Info.plist */; };
 		A0AE5BD626BC3C9500FB0AD8 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = A0AE5BD526BC3C9500FB0AD8 /* GoogleSignIn */; };
 		A0AE5BD826BC3D9600FB0AD8 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0AE5BD726BC3D9500FB0AD8 /* credentials.plist */; };
-		A0E54D9B26C2D021000EA915 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E54D9A26C2D021000EA915 /* ChatViewController.swift */; };
 		A0E54D9D26C2D0C3000EA915 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E54D9C26C2D0C3000EA915 /* PhotoViewController.swift */; };
 		A0E54D9F26C2D0D5000EA915 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E54D9E26C2D0D5000EA915 /* VideoViewController.swift */; };
-		A0E54DA126C2D10A000EA915 /* NewConvoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E54DA026C2D10A000EA915 /* NewConvoViewController.swift */; };
+		A0E54DA126C2D10A000EA915 /* MainChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E54DA026C2D10A000EA915 /* MainChatViewController.swift */; };
 		A0E54DA326C2D11F000EA915 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E54DA226C2D11F000EA915 /* ProfileViewController.swift */; };
+		A0E88E4426F751DF000F6EC3 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = A0E88E4326F751DF000F6EC3 /* SDWebImage */; };
+		A0E88E4626F751DF000F6EC3 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A0E88E4526F751DF000F6EC3 /* SDWebImageMapKit */; };
+		A0E88E4926F751FD000F6EC3 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = A0E88E4826F751FD000F6EC3 /* MessageKit */; };
+		A0E88E4E26F75594000F6EC3 /* ChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E88E4D26F75594000F6EC3 /* ChatTableViewController.swift */; };
+		A0E88E5126F75A54000F6EC3 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = A0E88E5026F75A54000F6EC3 /* JGProgressHUD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,11 +88,11 @@
 		A0908A7826C4D8CE00924BF0 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		A091325826B918C9006C5C0F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A0AE5BD726BC3D9500FB0AD8 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
-		A0E54D9A26C2D021000EA915 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		A0E54D9C26C2D0C3000EA915 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		A0E54D9E26C2D0D5000EA915 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
-		A0E54DA026C2D10A000EA915 /* NewConvoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConvoViewController.swift; sourceTree = "<group>"; };
+		A0E54DA026C2D10A000EA915 /* MainChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChatViewController.swift; sourceTree = "<group>"; };
 		A0E54DA226C2D11F000EA915 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A0E88E4D26F75594000F6EC3 /* ChatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,13 +104,17 @@
 				A02997D026B94C920036A88E /* FirebaseAppCheck in Frameworks */,
 				A0AE5BD626BC3C9500FB0AD8 /* GoogleSignIn in Frameworks */,
 				A02997D826B94C920036A88E /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
+				A0E88E5126F75A54000F6EC3 /* JGProgressHUD in Frameworks */,
 				A02997CE26B94C920036A88E /* FirebaseInstallations in Frameworks */,
 				A02997DA26B94C920036A88E /* FirebaseAuth in Frameworks */,
 				A02997D626B94C920036A88E /* FirebaseCrashlytics in Frameworks */,
 				A02997CC26B94C920036A88E /* FirebaseDatabase in Frameworks */,
 				A02997D226B94C920036A88E /* FirebaseAnalytics in Frameworks */,
+				A0E88E4926F751FD000F6EC3 /* MessageKit in Frameworks */,
 				A02997CA26B94C920036A88E /* FirebaseFirestore in Frameworks */,
+				A0E88E4426F751DF000F6EC3 /* SDWebImage in Frameworks */,
 				A02997DC26B94C920036A88E /* FirebaseInAppMessaging-Beta in Frameworks */,
+				A0E88E4626F751DF000F6EC3 /* SDWebImageMapKit in Frameworks */,
 				A006443626C0EE2300492BA3 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,12 +198,12 @@
 				A01B836326B65F2B004C909E /* SignViewController.swift */,
 				A01B836526B65F3D004C909E /* LogViewController.swift */,
 				A006443226C0ED1400492BA3 /* LottieViewController.swift */,
-				A0E54D9A26C2D021000EA915 /* ChatViewController.swift */,
 				A0E54D9C26C2D0C3000EA915 /* PhotoViewController.swift */,
 				A0E54D9E26C2D0D5000EA915 /* VideoViewController.swift */,
-				A0E54DA026C2D10A000EA915 /* NewConvoViewController.swift */,
+				A0E54DA026C2D10A000EA915 /* MainChatViewController.swift */,
 				A0E54DA226C2D11F000EA915 /* ProfileViewController.swift */,
 				A0908A7826C4D8CE00924BF0 /* InfoViewController.swift */,
+				A0E88E4D26F75594000F6EC3 /* ChatTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -247,6 +255,10 @@
 				A02997DB26B94C920036A88E /* FirebaseInAppMessaging-Beta */,
 				A0AE5BD526BC3C9500FB0AD8 /* GoogleSignIn */,
 				A006443526C0EE2300492BA3 /* Lottie */,
+				A0E88E4326F751DF000F6EC3 /* SDWebImage */,
+				A0E88E4526F751DF000F6EC3 /* SDWebImageMapKit */,
+				A0E88E4826F751FD000F6EC3 /* MessageKit */,
+				A0E88E5026F75A54000F6EC3 /* JGProgressHUD */,
 			);
 			productName = "CONNECT-Y";
 			productReference = A01B832C26B5AF6E004C909E /* CONNECT-Y.app */;
@@ -323,6 +335,9 @@
 				A02997C826B94C920036A88E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				A0AE5BD426BC3C9400FB0AD8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				A006443426C0EE2300492BA3 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				A0E88E4226F751DF000F6EC3 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				A0E88E4726F751FD000F6EC3 /* XCRemoteSwiftPackageReference "MessageKit" */,
+				A0E88E4F26F75A54000F6EC3 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 			);
 			productRefGroup = A01B832D26B5AF6E004C909E /* Products */;
 			projectDirPath = "";
@@ -372,10 +387,9 @@
 			files = (
 				A01B833A26B5AF6E004C909E /* CONNECT_Y.xcdatamodeld in Sources */,
 				A01B833426B5AF6E004C909E /* WelcomeViewController.swift in Sources */,
-				A0E54D9B26C2D021000EA915 /* ChatViewController.swift in Sources */,
 				A01B836426B65F2B004C909E /* SignViewController.swift in Sources */,
 				A06CBA8026D00B8F004BC5B2 /* DataBaseManager.swift in Sources */,
-				A0E54DA126C2D10A000EA915 /* NewConvoViewController.swift in Sources */,
+				A0E54DA126C2D10A000EA915 /* MainChatViewController.swift in Sources */,
 				A006443326C0ED1400492BA3 /* LottieViewController.swift in Sources */,
 				A0E54DA326C2D11F000EA915 /* ProfileViewController.swift in Sources */,
 				A0E54D9D26C2D0C3000EA915 /* PhotoViewController.swift in Sources */,
@@ -384,6 +398,7 @@
 				A01B833026B5AF6E004C909E /* AppDelegate.swift in Sources */,
 				A0E54D9F26C2D0D5000EA915 /* VideoViewController.swift in Sources */,
 				A01B833226B5AF6E004C909E /* SceneDelegate.swift in Sources */,
+				A0E88E4E26F75594000F6EC3 /* ChatTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,6 +757,30 @@
 				minimumVersion = 6.0.1;
 			};
 		};
+		A0E88E4226F751DF000F6EC3 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.1;
+			};
+		};
+		A0E88E4726F751FD000F6EC3 /* XCRemoteSwiftPackageReference "MessageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MessageKit/MessageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.7.0;
+			};
+		};
+		A0E88E4F26F75A54000F6EC3 /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -804,6 +843,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A0AE5BD426BC3C9400FB0AD8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignIn;
+		};
+		A0E88E4326F751DF000F6EC3 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0E88E4226F751DF000F6EC3 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		A0E88E4526F751DF000F6EC3 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0E88E4226F751DF000F6EC3 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+		A0E88E4826F751FD000F6EC3 /* MessageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0E88E4726F751FD000F6EC3 /* XCRemoteSwiftPackageReference "MessageKit" */;
+			productName = MessageKit;
+		};
+		A0E88E5026F75A54000F6EC3 /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0E88E4F26F75A54000F6EC3 /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 

@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import Firebase
 import GoogleSignIn
+import JGProgressHUD
 
 class LogViewController: UIViewController {
     
@@ -23,6 +24,8 @@ class LogViewController: UIViewController {
     @IBOutlet weak var gView: GIDSignInButton!
     
     private let  signInConfig = GIDConfiguration.init(clientID: "367437175798-lptot1fh5gj8d23m74pp3038l6b55agv.apps.googleusercontent.com" )
+    
+    private let spinner = JGProgressHUD(style: .dark)
     
     override func viewDidLoad() {
        setupUI()
@@ -75,29 +78,32 @@ class LogViewController: UIViewController {
     logInButton.layer.cornerRadius = 30
     }
     
+    
+    
     @IBAction func logInButton(_ sender: Any) {
         if let email = yourEmailTextF.text , let password = passTextView.text {
+            self.spinner.show(in: self.view)
             Auth.auth().signIn(withEmail: email, password: password) { (authResult , error) in
-                if let error = error {
-                    print(error.localizedDescription)
-                }
-                else{
-                    self.performSegue(withIdentifier: "goToInfo", sender: self )
-                }
                 
+                guard let result = authResult , error != nil
+                else{
+                    print("logged in")
+                    self.performSegue(withIdentifier: "goToInfo", sender: self )
+                    self.spinner.dismiss()
+                    return
+                }
             }
-          navigationController?.dismiss(animated: true, completion: nil)
-    }
+        }
 }
     
     @IBAction func googleLogIn(_ sender: UIButton) {
         GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
             guard error == nil else { return }
+            self.spinner.show(in: self.view)
             self.performSegue(withIdentifier: "goToInfo", sender: self)
           }
-        }
-
-    }
+     }
+}
     
     
     
