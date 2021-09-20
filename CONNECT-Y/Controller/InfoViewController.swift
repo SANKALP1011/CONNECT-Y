@@ -23,7 +23,6 @@ class InfoViewController: UIViewController
     override func viewDidLoad() {
         updateUI()
         didTapChangePic()
-        
         }
     
     override func viewDidAppear(_ animated: Bool) {
