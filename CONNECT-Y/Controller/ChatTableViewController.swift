@@ -9,6 +9,8 @@ import UIKit
 import Firebase
 import JGProgressHUD
 
+
+
 class ChatTableViewController: UITableViewController {
     
     private let chatTableView: UITableView = {
@@ -19,8 +21,6 @@ class ChatTableViewController: UITableViewController {
     
     let spinner = JGProgressHUD(style: .dark)
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(chatTableView)
@@ -30,9 +30,8 @@ class ChatTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         userValidate()
+        fetchMessage()
     }
-    
-    
     
     private func userValidate(){
         if FirebaseAuth.Auth.auth().currentUser == nil{
@@ -46,6 +45,10 @@ class ChatTableViewController: UITableViewController {
     private func setUpTableView(){
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    private func fetchMessage(){
+        tableView.isHidden = false
     }
 
     // MARK: - Table view data source
@@ -66,10 +69,6 @@ class ChatTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "goToMainChat", sender: self)
     }
-
-
-
-
 }
 
 

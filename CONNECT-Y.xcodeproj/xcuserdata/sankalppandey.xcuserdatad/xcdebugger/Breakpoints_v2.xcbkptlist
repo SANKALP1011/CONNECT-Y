@@ -3,4 +3,99 @@
    uuid = "871FC0A3-4F64-4221-BE94-DDB44BFCFF7F"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B7801CE8-7A34-4622-8313-BB7F82D2DDAF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CONNECT-Y/Controller/MainChatViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "MainChatViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "B7801CE8-7A34-4622-8313-BB7F82D2DDAF - fe3264b247ea825"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CONNECT_Y.MainChatViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; CONNECT_Y.MainChatViewController"
+                  moduleName = "CONNECT-Y"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/IOS%20APP%20DEVELOPMENT./PROJECTS./CONNECT-Y/CONNECT-Y/Controller/MainChatViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "B7801CE8-7A34-4622-8313-BB7F82D2DDAF - 4c91cd96d9eba23b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CONNECT_Y.MainChatViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; CONNECT_Y.MainChatViewController"
+                  moduleName = "CONNECT-Y"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/IOS%20APP%20DEVELOPMENT./PROJECTS./CONNECT-Y/CONNECT-Y/Controller/MainChatViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "B7801CE8-7A34-4622-8313-BB7F82D2DDAF - c439d35846c5f265"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CONNECT_Y.MainChatViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;CONNECT_Y.MainChatViewController&gt;"
+                  moduleName = "CONNECT-Y"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/IOS%20APP%20DEVELOPMENT./PROJECTS./CONNECT-Y/CONNECT-Y/Controller/MainChatViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "B7801CE8-7A34-4622-8313-BB7F82D2DDAF - be41df057f3f895f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CONNECT_Y.MainChatViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;CONNECT_Y.MainChatViewController&gt;"
+                  moduleName = "CONNECT-Y"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/IOS%20APP%20DEVELOPMENT./PROJECTS./CONNECT-Y/CONNECT-Y/Controller/MainChatViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "B7801CE8-7A34-4622-8313-BB7F82D2DDAF - 74a3c22fd4aa9bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CONNECT_Y.MainChatViewController.__deallocating_deinit"
+                  moduleName = "CONNECT-Y"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/IOS%20APP%20DEVELOPMENT./PROJECTS./CONNECT-Y/CONNECT-Y/Controller/MainChatViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

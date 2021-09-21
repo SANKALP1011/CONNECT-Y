@@ -8,30 +8,27 @@
 import UIKit
 import MessageKit
 
+
+
 class MainChatViewController: MessagesViewController {
     
-    @IBOutlet var nameLabel : UILabel!
     
-    private var message = [MessageModel]()
     
-   // var messageModel = MessageModel(sender: "bhb", messageId: "njn" , sentDate: "njn", kind: "nkj")
-   //var senderModel = SenderModel(senderId: "bjb", displayName: "hbhb", photoUrl: "jkj")
+    private var messages = [MessageModel]()
+    private var sender = SenderModel(senderId: "1", displayName: "John", photoUrl: "new string")
+    
+   
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //message.append(MessageModel(sender: , messageId: <#T##String#>, sentDate: <#T##Date#>, kind: <#T##MessageKind#>))
-        
-        nameLabel.text = "NAME"
-        nameLabel.layer.shadowColor = UIColor.black.cgColor
-        
-        
+        messages.append(MessageModel(sender: sender, messageId: "1", sentDate: Date(), kind: .text("Hey,this is a test.")))
+        messages.append(MessageModel(sender: sender, messageId: "1", sentDate: Date(), kind: .text("Hey,this is new.")))
         messagesCollectionView.dataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
-        
-        
-     }
+}
     
 
     
@@ -39,15 +36,15 @@ class MainChatViewController: MessagesViewController {
 
 extension MainChatViewController: MessagesDataSource , MessagesLayoutDelegate , MessagesDisplayDelegate{
     func currentSender() -> SenderType {
-        
+        return sender
     }
     
     func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
-        
+        return messages[indexPath.section]
     }
     
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
-        
+        return messages.count
     }
     
     
