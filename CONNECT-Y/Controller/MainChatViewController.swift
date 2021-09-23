@@ -12,14 +12,9 @@ import MessageKit
 
 class MainChatViewController: MessagesViewController {
     
-    
-    
     private var messages = [MessageModel]()
     private var sender = SenderModel(senderId: "1", displayName: "John", photoUrl: "new string")
     
-   
-   
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,9 +24,6 @@ class MainChatViewController: MessagesViewController {
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
 }
-    
-
-    
 }
 
 extension MainChatViewController: MessagesDataSource , MessagesLayoutDelegate , MessagesDisplayDelegate{
@@ -46,6 +38,4 @@ extension MainChatViewController: MessagesDataSource , MessagesLayoutDelegate , 
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
         return messages.count
     }
-    
-    
 }

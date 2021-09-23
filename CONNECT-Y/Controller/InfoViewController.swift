@@ -19,6 +19,8 @@ class InfoViewController: UIViewController
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var yourUserName: UITextField!
     @IBOutlet weak var yourStatus: UITextField!
+    @IBOutlet weak var nextView: UIView!
+    @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
         updateUI()
@@ -60,7 +62,19 @@ class InfoViewController: UIViewController
         profileImage.layer.masksToBounds = true
         profileImage.layer.borderWidth = 2
         profileImage.layer.borderColor = UIColor.lightGray.cgColor
-    }
+        
+        nextView.layer.cornerRadius = 30
+        nextView.layer.shadowOpacity = 0.5
+        nextView.layer.shadowColor = UIColor.black.cgColor
+        nextView.layer.shadowRadius = 10
+        nextView.layer.shadowOffset = .zero
+        
+        nextButton.layer.cornerRadius = 30
+        nextButton.layer.shadowOpacity = 0.5
+        nextButton.layer.shadowColor = UIColor.black.cgColor
+        nextButton.layer.shadowRadius = 10
+        nextButton.layer.shadowOffset = .zero
+}
     
     private func didTapChangePic()
     {
@@ -74,7 +88,6 @@ class InfoViewController: UIViewController
     {
         print("IMAGE TAPPED" , _sender)
         presentPhotoSheet()
-        
     }
     
     @objc func profileClicked(_sender: UITapGestureRecognizer)
@@ -102,10 +115,17 @@ class InfoViewController: UIViewController
             present(nav, animated: false)
         }
     }
-
     
-    
-}
+    @IBAction func nextButton(_sender: UIButton!){
+        if yourUserName.text != nil , yourStatus.text != nil{
+        performSegue(withIdentifier: "goToChatScreen", sender: self)
+        }
+        else
+        {
+        print("Enter your name")
+        }
+    }
+  }
 
 extension InfoViewController: UIImagePickerControllerDelegate , UINavigationControllerDelegate{
     
