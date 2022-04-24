@@ -1,3 +1,4 @@
+# Connect-y
 
-A Messaging App.\
-STATUS - ONGOING.
+# Status
+- Ongoing app.
